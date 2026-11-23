@@ -1,13 +1,10 @@
 package com.ahmed.dungeon;
-
-/**
- * Hello world!
- *
- */
+import com.ahmed.dungeon.ui.*;
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Renderer T = new TerminalRender();
+        T.showMsg("Test");
     }
 }
