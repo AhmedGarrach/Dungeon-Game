@@ -1,6 +1,6 @@
 package com.ahmed.dungeon.entities;
 
-public abstract class Creature extends Entity {
+public abstract class Creature extends Entity implements Damageable {
     int hp;
     int maxhp;
     int damage;
@@ -17,5 +17,16 @@ public abstract class Creature extends Entity {
     {
         setPosition(getX()+dx, getY()+dy);
     }
-    
+    public void takeDamage(int damage)
+    {
+        if(hp-damage<0)hp=0;
+        else hp-=damage;
+    }
+    public void heal(int h)
+    {
+        if(hp+h>maxhp)h=maxhp;
+        else hp+=h;
+    }
+    public boolean isAlive(){return hp==0;}
+    public int getHp(){return hp;}
 }

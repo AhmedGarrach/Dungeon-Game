@@ -4,5 +4,5 @@ public interface Damageable {
     public void takeDamage(int damage);
     public void heal(int hp);
     public boolean isAlive();
-    public void getHp();
+    public int getHp();
 }
