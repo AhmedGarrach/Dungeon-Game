@@ -29,4 +29,5 @@ public abstract class Creature extends Entity implements Damageable {
     }
     public boolean isAlive(){return hp==0;}
     public int getHp(){return hp;}
+    public int getDamage(){return damage;}
 }
