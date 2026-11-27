@@ -8,11 +8,11 @@ public class Player extends Creature {
     
     }
     public void equipWeapon(Weapon w){weapon = w;}
-    public void UnEquipWeapon(){weapon = null;}
+    public void unequipWeapon(){weapon = null;}
     public int getEffectiveDamage()
     {
         if(weapon == null)return damage;
-        else return damage+weapon.getBonus();
+        else return getDamage()+weapon.getBonus();
     }
     public void usePotion(Potion p){heal(p.getRegen());}
 }
